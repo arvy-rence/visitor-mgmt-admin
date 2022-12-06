@@ -27,6 +27,17 @@ export const tokens = (mode) => ({
             800: "#5a0404",
             900: "#2d0202"
         },
+        green: {
+            100: "#cce9d4",
+            200: "#99d4a9",
+            300: "#67be7e",
+            400: "#34a953",
+            500: "#019328",
+            600: "#017620",
+            700: "#015818",
+            800: "#003b10",
+            900: "#001d08"
+        },
     } : {
         primary: {
             100: "#00030f",
@@ -49,6 +60,17 @@ export const tokens = (mode) => ({
             700: "#ed6b6b",
             800: "#f39d9d",
             900: "#f9cece"
+        },
+        green: {
+            100: "#001d08",
+            200: "#003b10",
+            300: "#015818",
+            400: "#017620",
+            500: "#019328",
+            600: "#34a953",
+            700: "#67be7e",
+            800: "#99d4a9",
+            900: "#cce9d4"
         },
     })
 });
@@ -96,6 +118,18 @@ export const themeSettings = (mode) => {
             h4: {
                 fontFamily: ["Khula", "sans-serif"].join(","),
                 fontSize: 20,
+            },
+            h5: {
+                fontFamily: ["Khula", "sans-serif"].join(","),
+                fontSize: 16,
+            },
+            h6: {
+                fontFamily: ["Khula", "sans-serif"].join(","),
+                fontSize: 14,
+            },
+            h7: {
+                fontFamily: ["Khula", "sans-serif"].join(","),
+                fontSize: 12,
             },
         }
     }
