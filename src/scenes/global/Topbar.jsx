@@ -1,4 +1,4 @@
-import { Box, IconButton, useTheme } from "@mui/material";
+import {Box, IconButton, Typography, useTheme} from "@mui/material";
 import { useContent, useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from '@mui/material/InputBase';
@@ -18,11 +18,21 @@ const Topbar = () => {
     return (
         <Box display="flex" justifyContent="space-between" p={2}>
             {/* SearchBar */}
-            <Box display="flex" backgroundColor={colors.primary[400]} borderRadius="3px">
-                <InputBase sx={{ml: 2, flex: 1}} placeholder="Search"/>
-                <IconButton type="button" sx={{p:1}}>
-                    <SearchOutlinedIcon/>
-                </IconButton>
+            {/*<Box display="flex" backgroundColor={colors.primary[400]} borderRadius="3px">*/}
+            {/*    <InputBase sx={{ml: 2, flex: 1}} placeholder="Search"/>*/}
+            {/*    <IconButton type="button" sx={{p:1}}>*/}
+            {/*        <SearchOutlinedIcon/>*/}
+            {/*    </IconButton>*/}
+            {/*</Box>*/}
+            <Box display="flex" alignItems="center">
+                <Box display="block" width="10px"/>
+                <Typography>
+                    6:11 AM
+                </Typography>
+                <Box display="block" width="20px"/>
+                <Typography>
+                    Monday, 12th October
+                </Typography>
             </Box>
 
             {/* ICONS */}

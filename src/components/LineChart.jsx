@@ -1,9 +1,48 @@
-import { ResponsiveLine } from '@nivo/line'
+import { ResponsiveLine } from '@nivo/line';
+import { lineChartData as data} from "../data/mockData";
+import { useTheme } from "@mui/material";
+import { tokens} from "../theme";
 
-const LineChart = ({data}) => {
+const LineChart = ({xlabel, ylabel}) => {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+
     return(
         <ResponsiveLine
             data={data}
+            theme={{
+                axis: {
+                    domain: {
+                        line: {
+                            stroke: colors.black,
+                        }
+                    },
+                    legend: {
+                        text: {
+                            fill: colors.black,
+                        }
+                    },
+                    ticks: {
+                        line: {
+                            stroke: colors.black,
+                            strokeWidth: 1,
+                        },
+                        text: {
+                            fill: colors.black,
+                        }
+                    }
+                },
+                legends: {
+                    text: {
+                        fill: colors.black,
+                    }
+                },
+                tooltip: {
+                    container: {
+                        color: colors.black
+                    }
+                }
+            }}
             margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
             xScale={{ type: 'point' }}
             yScale={{
@@ -21,28 +60,30 @@ const LineChart = ({data}) => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'transportation',
+                legend: ylabel,
                 legendOffset: 36,
                 legendPosition: 'middle'
             }}
             axisLeft={{
                 orient: 'left',
-                tickSize: 5,
+                tickValues: 5,
+                tickSize: 3,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'count',
+                legend: xlabel,
                 legendOffset: -40,
                 legendPosition: 'middle'
             }}
-            pointSize={10}
+            enableGridX={false}
+            pointSize={5}
             pointColor={{ theme: 'background' }}
             pointBorderWidth={2}
-            pointBorderColor={{ from: 'serieColor' }}
+            pointBorderColor={{ from: 'serieColor', modifiers: [] }}
             pointLabelYOffset={-12}
             useMesh={true}
             legends={[
                 {
-                    anchor: 'bottom-right',
+                    anchor: 'right',
                     direction: 'column',
                     justify: false,
                     translateX: 100,
@@ -66,6 +107,9 @@ const LineChart = ({data}) => {
                     ]
                 }
             ]}
+            motionConfig="stiff"
         />
     );
 }
+
+export default LineChart;

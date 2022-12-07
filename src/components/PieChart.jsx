@@ -1,7 +1,7 @@
 import { ResponsivePie } from '@nivo/pie';
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
-import { mockPieData as data } from "../data/mockData";
+import { pieChartData as data } from "../data/mockData";
 
 const PieChart = () => {
     const theme = useTheme();
@@ -36,9 +36,15 @@ const PieChart = () => {
                     text: {
                         fill: colors.primary[100],
                     }
+                },
+                tooltip: {
+                    container: {
+                        background: colors.primary[100],
+                        color: colors.black
+                    },
                 }
             }}
-            margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+            margin={{ top: 10, right: 200, bottom: 10, left: 0 }}
             innerRadius={0.5}
             padAngle={0.7}
             cornerRadius={3}
@@ -54,8 +60,10 @@ const PieChart = () => {
                     ]
                 ]
             }}
+
+            enableArcLinkLabels={false}
             arcLinkLabelsSkipAngle={10}
-            arcLinkLabelsTextColor="#333333"
+            arcLinkLabelsTextColor={colors.primary[100]}
             arcLinkLabelsThickness={2}
             arcLinkLabelsColor={{ from: 'color' }}
             arcLabelsSkipAngle={10}
@@ -88,67 +96,19 @@ const PieChart = () => {
                     spacing: 10
                 }
             ]}
-            fill={[
-                {
-                    match: {
-                        id: 'ruby'
-                    },
-                    id: 'dots'
-                },
-                {
-                    match: {
-                        id: 'c'
-                    },
-                    id: 'dots'
-                },
-                {
-                    match: {
-                        id: 'go'
-                    },
-                    id: 'dots'
-                },
-                {
-                    match: {
-                        id: 'python'
-                    },
-                    id: 'dots'
-                },
-                {
-                    match: {
-                        id: 'scala'
-                    },
-                    id: 'lines'
-                },
-                {
-                    match: {
-                        id: 'lisp'
-                    },
-                    id: 'lines'
-                },
-                {
-                    match: {
-                        id: 'elixir'
-                    },
-                    id: 'lines'
-                },
-                {
-                    match: {
-                        id: 'javascript'
-                    },
-                    id: 'lines'
-                }
-            ]}
             legends={[
                 {
-                    anchor: 'bottom',
-                    direction: 'row',
+                    anchor: 'right',
+                    direction: 'column',
                     justify: false,
-                    translateX: 0,
-                    translateY: 56,
-                    itemsSpacing: 0,
+                    translateX: 80,
+                    translateY: 0,
+                    itemsSpacing: 10,
                     itemWidth: 100,
                     itemHeight: 18,
-                    itemTextColor: '#999',
+                    itemTextColor: colors.primary[500],
+
+                    itemTextSize: 20,
                     itemDirection: 'left-to-right',
                     itemOpacity: 1,
                     symbolSize: 18,

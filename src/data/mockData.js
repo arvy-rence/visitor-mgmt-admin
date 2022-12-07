@@ -121,7 +121,151 @@ export const patronsData = [
     contact: "",
     dateregistered: ""
   },
-]
+];
+
+export const pieChartData = [
+  {
+    id: "Children (0-14)",
+    label: "Children (0-14)",
+    value: 60,
+    color: "hsl(104, 70%, 50%)",
+  },
+  {
+    id: "Early working age (15-24)",
+    label: "Early working age (15-24)",
+    value: 98,
+    color: "hsl(162, 70%, 50%)",
+  },
+  {
+    id: "Prime working age (25-54)",
+    label: "Prime working age (25-54)",
+    value: 180,
+    color: "hsl(291, 70%, 50%)",
+  },
+  {
+    id: "Mature working age (55-64)",
+    label: "Mature working age (55-64)",
+    value: 10,
+    color: "hsl(229, 70%, 50%)",
+  },
+  {
+    id: "Elderly (65 and above)",
+    label: "Elderly (65 and above)",
+    value: 30,
+    color: "hsl(344, 70%, 50%)",
+  },
+];
+
+export const lineChartData = [
+  {
+    id: "Male",
+    color: tokens("dark").primary[500],
+    data: [
+      {
+        x: "JAN",
+        y: 192,
+      },
+      {
+        x: "FEB",
+        y: 75,
+      },
+      {
+        x: "MAR",
+        y: 36,
+      },
+      {
+        x: "APR",
+        y: 216,
+      },
+      {
+        x: "MAY",
+        y: 35,
+      },
+      {
+        x: "JUN",
+        y: 236,
+      },
+      {
+        x: "JUL",
+        y: 88,
+      },
+      {
+        x: "AUG",
+        y: 232,
+      },
+      {
+        x: "SEP",
+        y: 281,
+      },
+      {
+        x: "OCT",
+        y: 1,
+      },
+      {
+        x: "NOV",
+        y: 35,
+      },
+      {
+        x: "DEC",
+        y: 14,
+      },
+    ],
+  },
+  {
+    id: "Female",
+    color: tokens("dark").secondary[500],
+    data: [
+      {
+        x: "JAN",
+        y: 1,
+      },
+      {
+        x: "FEB",
+        y: 300,
+      },
+      {
+        x: "MAR",
+        y: 36,
+      },
+      {
+        x: "APR",
+        y: 216,
+      },
+      {
+        x: "MAY",
+        y: 35,
+      },
+      {
+        x: "JUN",
+        y: 432,
+      },
+      {
+        x: "JUL",
+        y: 828,
+      },
+      {
+        x: "AUG",
+        y: 987,
+      },
+      {
+        x: "SEP",
+        y: 261,
+      },
+      {
+        x: "OCT",
+        y: 123,
+      },
+      {
+        x: "NOV",
+        y: 335,
+      },
+      {
+        x: "DEC",
+        y: 213,
+      },
+    ],
+  }
+];
 
 export const mockDataTeam = [
   {
@@ -475,110 +619,110 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "m",
+    id: "Male",
     color: tokens("dark").primary[500],
     data: [
       {
-        x: "plane",
-        y: 101,
+        x: "JAN",
+        y: 192,
       },
       {
-        x: "helicopter",
+        x: "FEB",
         y: 75,
       },
       {
-        x: "boat",
+        x: "MAR",
         y: 36,
       },
       {
-        x: "train",
+        x: "APR",
         y: 216,
       },
       {
-        x: "subway",
+        x: "MAY",
         y: 35,
       },
       {
-        x: "bus",
+        x: "JUN",
         y: 236,
       },
       {
-        x: "car",
+        x: "JUL",
         y: 88,
       },
       {
-        x: "moto",
+        x: "AUG",
         y: 232,
       },
       {
-        x: "bicycle",
+        x: "SEP",
         y: 281,
       },
       {
-        x: "horse",
+        x: "OCT",
         y: 1,
       },
       {
-        x: "skateboard",
+        x: "NOV",
         y: 35,
       },
       {
-        x: "others",
+        x: "DEC",
         y: 14,
       },
     ],
   },
   {
-    id: "f",
-    color: tokens("dark").secondary[300],
+    id: "Female",
+    color: tokens("dark").secondary[500],
     data: [
       {
-        x: "plane",
-        y: 212,
+        x: "JAN",
+        y: 1,
       },
       {
-        x: "helicopter",
-        y: 190,
+        x: "FEB",
+        y: 300,
       },
       {
-        x: "boat",
-        y: 270,
+        x: "MAR",
+        y: 36,
       },
       {
-        x: "train",
-        y: 9,
+        x: "APR",
+        y: 216,
       },
       {
-        x: "subway",
-        y: 75,
+        x: "MAY",
+        y: 35,
       },
       {
-        x: "bus",
-        y: 175,
+        x: "JUN",
+        y: 432,
       },
       {
-        x: "car",
-        y: 33,
+        x: "JUL",
+        y: 828,
       },
       {
-        x: "moto",
-        y: 189,
+        x: "AUG",
+        y: 987,
       },
       {
-        x: "bicycle",
-        y: 97,
+        x: "SEP",
+        y: 261,
       },
       {
-        x: "horse",
-        y: 87,
+        x: "OCT",
+        y: 123,
       },
       {
-        x: "skateboard",
-        y: 299,
+        x: "NOV",
+        y: 335,
       },
       {
-        x: "others",
-        y: 251,
+        x: "DEC",
+        y: 213,
       },
     ],
   }
